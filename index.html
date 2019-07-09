@@ -14,7 +14,7 @@
         <main>
             <h2>Calculate Wilks Points</h2>
             <article>
-                <form>
+                <form name="wilksForm">
                     <fieldset>
                         <legend>Calculate Wilks Points in pounds (lbs)</legend>
                         <p>Units:
@@ -30,11 +30,11 @@
                         <p>Bodyweight:
                             <input type="text" name="bodyweight"></p>
                         <p>Lifted Weight:
-                            <input type="text" name="liftedWeight"></p>
-                        <p>Wilks Score:</p>
-                        <input type="submit" value="Calculate">
+                            <input type="text" name="total"></p>
+                        <button type="button" onclick="calculateWilks()">Calculate</button>
                     </fieldset>
                 </form>
+                <p id="wilksOutput">Wilks Score:</p>
             </article>
         </main>
         <footer>
