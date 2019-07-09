@@ -16,7 +16,7 @@
             <article>
                 <form name="wilksForm">
                     <fieldset>
-                        <legend>Calculate Wilks Points in pounds (lbs)</legend>
+                        <legend id="legend">Calculate Wilks Points in pounds (lbs)</legend>
                         <p>Units:
                             <select name="units">
                                 <option value="lbs">lbs</option>
@@ -27,9 +27,9 @@
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
                             </select></p>
-                        <p>Bodyweight:
+                        <p id="bodyweight">Bodyweight (lbs):
                             <input type="text" name="bodyweight"></p>
-                        <p>Lifted Weight:
+                        <p id="total">Lifted Weight (lbs):
                             <input type="text" name="total"></p>
                         <button type="button" onclick="calculateWilks()">Calculate</button>
                     </fieldset>
