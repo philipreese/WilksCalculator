@@ -1,1 +1,2 @@
 # WilksCalculator
+The Wilks Coefficient or Wilks Formula is a coefficient that can be used to measure the strength of a powerlifter against other powerlifters despite the different weights of the lifters. Robert Wilks, CEO of Powerlifting Australia, is the author of the formula. 
