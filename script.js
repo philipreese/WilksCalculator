@@ -24,7 +24,7 @@ function calculateWilks() {
         // Set the coefficient array based on whether the user selected male or female
         let coeffArray = document.wilksForm.gender.value === "male" ? maleCoefficientArray : femaleCoefficientArray;
 
-        wilksScore = total * (numerator / (coeffArray[0] + (coeffArray[1] * bodyweight) + (coeffArray[2] * (bodyweight ** 2)) + (coeffArray[3] * (bodyweight ** 3)) + (coeffArray[4] * (bodyweight ** 4)) + (coeffArray[5] * (bodyweight ** 5)))).toFixed(2);
+        wilksScore = total * (numerator / (coeffArray[0] + (coeffArray[1] * bodyweight) + (coeffArray[2] * (bodyweight ** 2)) + (coeffArray[3] * (bodyweight ** 3)) + (coeffArray[4] * (bodyweight ** 4)) + (coeffArray[5] * (bodyweight ** 5))));
         wilksScore = +wilksScore.toFixed(2);
     }
 
@@ -33,17 +33,7 @@ function calculateWilks() {
 
 // Callback for onchange event for the units selection to change labels between lbs and kgs
 document.wilksForm.units.addEventListener("change", function() {
-    let legend = document.getElementById("legend");
-    let bodyweight = document.getElementById("bodyweight");
-    let total = document.getElementById("total");
-
-    if (document.wilksForm.units.value === "lbs") {
-        legend.textContent = "Calculate Wilks Points in pounds (lbs)";
-        bodyweight.childNodes[0].textContent = "Bodyweight (lbs): ";
-        total.childNodes[0].textContent = "Lifted Weight (lbs): ";
-    } else {
-        legend.textContent = "Calculate Wilks Points in kilograms (kgs)";
-        bodyweight.childNodes[0].textContent = "Bodyweight (kgs): ";
-        total.childNodes[0].textContent = "Lifted Weight (kgs): ";
-    }
+    document.getElementById("legend").textContent = "Calculate Wilks Points in pounds (" + document.wilksForm.units.value + ")";
+    document.getElementById("bodyweight").childNodes[0].textContent = "Bodyweight (" + document.wilksForm.units.value + "): ";
+    document.getElementById("total").childNodes[0].textContent = "Lifted Weight (" + document.wilksForm.units.value + "): ";
 });
