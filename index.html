@@ -4,37 +4,48 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Wilks Calculator</title>
-        <link rel="stylesheet" type="text\css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="script.js" defer></script>
     </head>
     <body>
         <header>
-            <h1>Wilks Calculator</h1>
+            <h1>Wilks Score Calculator</h1>
         </header>
         <main>
-            <h2>Calculate Wilks Points</h2>
+            <h2>Calculate Wilks Points to Compare Your Performance!</h2>
             <article>
                 <form name="wilksForm">
-                    <fieldset>
-                        <legend id="legend">Calculate Wilks Points in pounds (lbs)</legend>
-                        <p>Units:
+                    <div class="row first-row" id="legend">Calculate Wilks Points in pounds (lbs)</div>
+                    <div class="inputs">
+                        <div class="row">
+                            <label for="units">Units:</label>
                             <select name="units">
                                 <option value="lbs">lbs</option>
                                 <option value="kgs">kgs</option>
-                            </select></p>
-                        <p>Gender:
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label for="gender">Gender:</label>
                             <select name="gender">
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
-                            </select></p>
-                        <p id="bodyweight">Bodyweight (lbs):
-                            <input type="text" name="bodyweight"></p>
-                        <p id="total">Lifted Weight (lbs):
-                            <input type="text" name="total"></p>
+                            </select>
+                        </div>
+                        <div class="row" id="bodyweight">
+                            <label for="bodyweight">Bodyweight (lbs):</label>
+                            <input type="text" name="bodyweight">
+                        </div>
+                        <div class="row" id="total">
+                            <label for="total">Lifted Weight (lbs):</label>
+                            <input type="text" name="total">
+                        </div>
+                    </div>
+                    <div class="row last-row">
+                        <p class="inlineBlock">Wilks Score:</p>
+                        <p class="inlineBlock" id="wilksOutput"></p>
                         <button type="button" onclick="calculateWilks()">Calculate</button>
-                    </fieldset>
+                    </div>
                 </form>
-                <p id="wilksOutput">Wilks Score:</p>
             </article>
         </main>
         <footer>
