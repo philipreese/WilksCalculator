@@ -1,29 +1,64 @@
 html {
     box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightcyan;
 }
 *,
 *:before,
 *:after {
     box-sizing: inherit;
 }
+header {
+    border-bottom: 2px solid darkcyan;
+    margin: 0;
+    padding: 20px;
+    text-transform: uppercase;
+}
+h1, h2 {
+    font-weight: normal;
+}
+main {
+    padding: 20px;
+    background-color: white;
+}
 form {
     max-width: 800px;
-    border: none;
+    border: 2px solid darkcyan;
+    background-color: lightcyan;
 }
-input, select {
+.inputs {
+    margin: 10px;
+}
+.row {
+    padding: 8px 20px;
+}
+.first-row,
+.last-row {
+    background-color: darkcyan;
+    padding: 20px;
+}
+#legend {
+    font-weight: bolder;
+}
+input,
+select {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 12px 0;
     border-radius: 4px;
 }
-input:focus, select:focus {
-    background-color: lightblue;
+input:focus,
+select:focus {
+    background-color: darkcyan;
 }
 select:hover {
     cursor: pointer;
 }
-button {    
-    background-color: lightblue;  
+button {
+    background-color: lightcyan;
     border: none;
     border-radius: 4px;
     padding: 16px 32px;
@@ -39,4 +74,9 @@ button {
 }
 #wilksOutput {
     font-weight: bold;
+}
+footer {
+    border-top: 2px solid darkcyan;
+    padding: 20px;
+    text-transform: uppercase;
 }

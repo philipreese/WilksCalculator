@@ -39,7 +39,8 @@ function calculateWilks() {
 
 // Callback for onchange event for the units selection to change labels between lbs and kgs
 document.wilksForm.units.addEventListener("change", function() {
-    document.getElementById("legend").textContent = "Calculate Wilks Points in pounds (" + document.wilksForm.units.value + ")";
+    let unit = document.wilksForm.units.value === "lbs" ? "pounds" : "kilograms";
+    document.getElementById("legend").textContent = "Calculate Wilks Points in " + unit + " (" + document.wilksForm.units.value + ")";
     document.getElementById("bodyweight").children[0].textContent = "Bodyweight (" + document.wilksForm.units.value + "): ";
     document.getElementById("total").children[0].textContent = "Lifted Weight (" + document.wilksForm.units.value + "): ";
 });

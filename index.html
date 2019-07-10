@@ -9,14 +9,14 @@
     </head>
     <body>
         <header>
-            <h1>Wilks Calculator</h1>
+            <h1>Wilks Score Calculator</h1>
         </header>
         <main>
-            <h2>Calculate Wilks Points</h2>
+            <h2>Calculate Wilks Points to Compare Your Performance!</h2>
             <article>
                 <form name="wilksForm">
-                    <fieldset>
-                        <legend id="legend">Calculate Wilks Points in pounds (lbs)</legend>
+                    <div class="row first-row" id="legend">Calculate Wilks Points in pounds (lbs)</div>
+                    <div class="inputs">
                         <div class="row">
                             <label for="units">Units:</label>
                             <select name="units">
@@ -39,12 +39,12 @@
                             <label for="total">Lifted Weight (lbs):</label>
                             <input type="text" name="total">
                         </div>
-                        <div>
-                            <p class="inlineBlock">Wilks Score:</p>
-                            <p class="inlineBlock" id="wilksOutput"></p>
-                            <button type="button" onclick="calculateWilks()">Calculate</button>
-                        </div>
-                    </fieldset>
+                    </div>
+                    <div class="row last-row">
+                        <p class="inlineBlock">Wilks Score:</p>
+                        <p class="inlineBlock" id="wilksOutput"></p>
+                        <button type="button" onclick="calculateWilks()">Calculate</button>
+                    </div>
                 </form>
             </article>
         </main>
