@@ -47,7 +47,7 @@ form {
 input,
 select {
     width: 100%;
-    padding: 12px 0;
+    padding: 12px;
     border-radius: 4px;
 }
 input:focus,
@@ -56,6 +56,9 @@ select:focus {
 }
 select:hover {
     cursor: pointer;
+}
+.error-text {
+    color: darkred;
 }
 button {
     background-color: lightcyan;
@@ -68,7 +71,7 @@ button {
     float: right;
     font-size: 1.25em;
 }
-.inlineBlock {
+.inline-block {
     display: inline-block;
     font-size: 1.25em;
 }
